@@ -10,7 +10,7 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.version = exports.isEqual = exports.overlaps = exports.isProperSubset = exports.isSubset = exports.intersect = exports.union = exports.properSubsets = exports.powerSet = exports.subsets = exports.sizeType = exports.isProper = exports.isNull = exports.belongs = exports.Set = exports.length = void 0;
+exports.version = exports.isEqual = exports.overlaps = exports.isProperSubset = exports.isSubset = exports.subtract = exports.intersect = exports.union = exports.properSubsets = exports.powerSet = exports.subsets = exports.sizeType = exports.isProper = exports.isNull = exports.belongs = exports.Set = exports.length = void 0;
 __exportStar(require("./Util"), exports);
 var Util_1 = require("./Util");
 Object.defineProperty(exports, "length", { enumerable: true, get: function () { return Util_1.n; } });
@@ -26,6 +26,7 @@ Object.defineProperty(exports, "powerSet", { enumerable: true, get: function () 
 Object.defineProperty(exports, "properSubsets", { enumerable: true, get: function () { return Methods_1.properSubsets; } });
 Object.defineProperty(exports, "union", { enumerable: true, get: function () { return Methods_1.union; } });
 Object.defineProperty(exports, "intersect", { enumerable: true, get: function () { return Methods_1.intersect; } });
+Object.defineProperty(exports, "subtract", { enumerable: true, get: function () { return Methods_1.subtract; } });
 Object.defineProperty(exports, "isSubset", { enumerable: true, get: function () { return Methods_1.isSubset; } });
 Object.defineProperty(exports, "isProperSubset", { enumerable: true, get: function () { return Methods_1.isProperSubset; } });
 Object.defineProperty(exports, "overlaps", { enumerable: true, get: function () { return Methods_1.overlaps; } });
