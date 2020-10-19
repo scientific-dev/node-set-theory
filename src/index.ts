@@ -19,4 +19,4 @@ export {
     isEqual
 } from './Methods';
 
-export const version: string = '0.0.1';
+export const version: string = '0.0.2';
