@@ -25,14 +25,21 @@ const Util_1 = require("./Util");
 class Set {
     constructor(set) {
         this.set = Util_1.parse(set);
-        this.size = this.set.length;
-        this.length = this.size;
-        this.proper = Util_1.proper(this.set);
-        this.null = Methods.isNull(this.set);
-        this.sizeType = Methods.sizeType(this.set);
-        this.subsets = Methods.subsets(this.set);
-        this.properSubsets = Methods.properSubsets(this.set);
     }
+    ;
+    get size() { return this.set.length; }
+    ;
+    get length() { return this.set.length; }
+    ;
+    get proper() { return Util_1.proper(this.set); }
+    ;
+    get null() { return Methods.isNull(this.set); }
+    ;
+    get sizeType() { return Methods.sizeType(this.set); }
+    ;
+    get subsets() { return Methods.subsets(this.set); }
+    ;
+    get properSubsets() { return Methods.properSubsets(this.set); }
     ;
 }
 exports.Set = Set;

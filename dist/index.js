@@ -31,5 +31,5 @@ Object.defineProperty(exports, "isSubset", { enumerable: true, get: function () 
 Object.defineProperty(exports, "isProperSubset", { enumerable: true, get: function () { return Methods_1.isProperSubset; } });
 Object.defineProperty(exports, "overlaps", { enumerable: true, get: function () { return Methods_1.overlaps; } });
 Object.defineProperty(exports, "isEqual", { enumerable: true, get: function () { return Methods_1.isEqual; } });
-exports.version = '0.0.2';
+exports.version = '0.0.3';
 //# sourceMappingURL=index.js.map

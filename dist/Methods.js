@@ -60,7 +60,7 @@ function subsets(set) {
 exports.subsets = subsets;
 ;
 function properSubsets(set) {
-    return subsets(set).shift();
+    return Util_1.proper(subsets(set));
 }
 exports.properSubsets = properSubsets;
 ;
