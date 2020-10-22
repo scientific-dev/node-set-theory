@@ -1,6 +1,6 @@
 {
   "name": "node-set-theory",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Simple package to calculate sets using javascript...",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
