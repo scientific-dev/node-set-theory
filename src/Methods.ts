@@ -44,7 +44,7 @@ export function subsets(set: any): any[] {
 };
 
 export function properSubsets(set: any): any[] {
-    return subsets(set).shift();
+    return proper(subsets(set));
 };
 
 export function union(setX: any, setY: any): any[] {
