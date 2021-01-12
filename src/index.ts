@@ -1,6 +1,7 @@
 export * from './Util';
 export { n as length } from './Util';
 export { Set } from './Class';
+export { Universe } from './Universe';
 
 export {
     belongs,
@@ -16,7 +17,7 @@ export {
     isSubset,
     isProperSubset,
     overlaps,
-    isEqual
+    isEqual,
 } from './Methods';
 
-export const version: string = '0.0.3';
+export const version: string = '1.0.0-beta';

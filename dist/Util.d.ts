@@ -1,5 +1,6 @@
-export declare function removeDuplicates(set: any[]): any[];
-export declare function parse(set: any[]): any[];
+export declare function removeDuplicates<T>(set: T[]): T[];
+export declare function parse<T>(set: T[]): T[];
 export declare function n(set: any): number;
-export declare function P(set: any): any[];
-export declare function proper(set: any): any[];
+export declare function P<T>(set: T[]): T[][];
+export declare function proper<T>(set: (T | [] | null | undefined | 0 | false)[]): T[];
+export declare function stringify(set: any[]): string;

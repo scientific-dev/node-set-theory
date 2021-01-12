@@ -10,12 +10,14 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.version = exports.isEqual = exports.overlaps = exports.isProperSubset = exports.isSubset = exports.subtract = exports.intersect = exports.union = exports.properSubsets = exports.powerSet = exports.subsets = exports.sizeType = exports.isProper = exports.isNull = exports.belongs = exports.Set = exports.length = void 0;
+exports.version = exports.isEqual = exports.overlaps = exports.isProperSubset = exports.isSubset = exports.subtract = exports.intersect = exports.union = exports.properSubsets = exports.powerSet = exports.subsets = exports.sizeType = exports.isProper = exports.isNull = exports.belongs = exports.Universe = exports.Set = exports.length = void 0;
 __exportStar(require("./Util"), exports);
 var Util_1 = require("./Util");
 Object.defineProperty(exports, "length", { enumerable: true, get: function () { return Util_1.n; } });
 var Class_1 = require("./Class");
 Object.defineProperty(exports, "Set", { enumerable: true, get: function () { return Class_1.Set; } });
+var Universe_1 = require("./Universe");
+Object.defineProperty(exports, "Universe", { enumerable: true, get: function () { return Universe_1.Universe; } });
 var Methods_1 = require("./Methods");
 Object.defineProperty(exports, "belongs", { enumerable: true, get: function () { return Methods_1.belongs; } });
 Object.defineProperty(exports, "isNull", { enumerable: true, get: function () { return Methods_1.isNull; } });
@@ -31,5 +33,4 @@ Object.defineProperty(exports, "isSubset", { enumerable: true, get: function () 
 Object.defineProperty(exports, "isProperSubset", { enumerable: true, get: function () { return Methods_1.isProperSubset; } });
 Object.defineProperty(exports, "overlaps", { enumerable: true, get: function () { return Methods_1.overlaps; } });
 Object.defineProperty(exports, "isEqual", { enumerable: true, get: function () { return Methods_1.isEqual; } });
-exports.version = '0.0.3';
-//# sourceMappingURL=index.js.map
+exports.version = '1.0.0-beta';

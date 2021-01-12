@@ -20,10 +20,10 @@ function isProper(set) {
 exports.isProper = isProper;
 ;
 function sizeType(set) {
-    set = Util_1.proper(Util_1.parse(set)).length;
-    if (set == 0)
+    let len = Util_1.proper(Util_1.parse(set)).length;
+    if (len == 0)
         return 'empty';
-    else if (set == 1)
+    else if (len == 1)
         return 'singleton';
     else
         return 'many';
@@ -55,7 +55,7 @@ function isEqual(setX, setY) {
 exports.isEqual = isEqual;
 ;
 function subsets(set) {
-    return Util_1.parse(set).reduce((subsets, value) => subsets.concat(subsets.map(set => [value, ...set])), [[]]);
+    return Util_1.parse(set).reduce((subsets, value) => subsets.concat(subsets.map((set) => [value, ...set])), [[]]);
 }
 exports.subsets = subsets;
 ;
@@ -106,4 +106,3 @@ function isProperSubset(setX, setY) {
 }
 exports.isProperSubset = isProperSubset;
 ;
-//# sourceMappingURL=Methods.js.map

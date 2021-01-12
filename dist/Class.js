@@ -21,27 +21,80 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Set = void 0;
 const Methods = __importStar(require("./Methods"));
+const Universe_1 = require("./Universe");
 const Util_1 = require("./Util");
-class Set {
-    constructor(set) {
-        this.set = Util_1.parse(set);
+class Set extends Array {
+    constructor(...set) {
+        super();
+        this.push(...Util_1.parse(set));
     }
     ;
-    get size() { return this.set.length; }
+    get size() { return this.length; }
     ;
-    get length() { return this.set.length; }
+    get proper() { return Util_1.proper(this); }
     ;
-    get proper() { return Util_1.proper(this.set); }
+    get null() { return Methods.isNull(this); }
     ;
-    get null() { return Methods.isNull(this.set); }
+    get sizeType() { return Methods.sizeType(this); }
     ;
-    get sizeType() { return Methods.sizeType(this.set); }
+    get subsets() { return Methods.subsets(this); }
     ;
-    get subsets() { return Methods.subsets(this.set); }
+    get properSubsets() { return Methods.properSubsets(this); }
     ;
-    get properSubsets() { return Methods.properSubsets(this.set); }
-    ;
+    setUniverse(universe, label) {
+        universe.data[label] = this;
+        this.universe = universe;
+        return this;
+    }
+    overlaps(...set) {
+        return Methods.overlaps(this, set);
+    }
+    complement() {
+        if (!this.universe)
+            this.universe = new Universe_1.Universe();
+        return new Set(...Methods.subtract(this.universe.set, this));
+    }
+    makeProper() {
+        this.splice(0, this.length);
+        this.push(...this.proper);
+        return this;
+    }
+    union(...items) {
+        super.push(...Util_1.parse(items));
+        return this;
+    }
+    intersect(...items) {
+        this.copy(...Methods.intersect(this, items));
+        return this;
+    }
+    sutract(...items) {
+        this.copy(...Methods.subtract(this, items));
+        return this;
+    }
+    sutractFrom(...items) {
+        this.copy(...Methods.subtract(items, this));
+        return this;
+    }
+    isSubset(...items) {
+        return Methods.isSubset(this, items);
+    }
+    isProperSubset(...items) {
+        return Methods.isProperSubset(this, items);
+    }
+    clear() {
+        this.splice(0, this.length);
+    }
+    copy(...items) {
+        this.clear();
+        items.forEach((x, i) => this[i] = x);
+        return this;
+    }
+    toString() {
+        return Util_1.stringify(this);
+    }
+    static create(...items) {
+        return new Set(...items);
+    }
 }
 exports.Set = Set;
 ;
-//# sourceMappingURL=Class.js.map
