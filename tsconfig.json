@@ -8,11 +8,10 @@
     "module": "commonjs",
     "allowJs": true,
     "moduleResolution": "node",
-    "sourceMap": true,
     "lib": ["es2018", "dom"],
     "rootDir": "./src",
     "outDir": "./dist",
-    "strict": true
+    "strict": false
   },
   "include": ["src"],
   "exclude": ["node_modules"]
