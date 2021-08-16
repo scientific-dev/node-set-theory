@@ -3,9 +3,9 @@
 A Very brief wrapper for set calculations using Arrays...
 
 # Links
-- [Docs](https://github.com/Scientific-Guy/node-set-theory/wiki)
+- [Docs](https://github.com/scientific-dev/node-set-theory/wiki)
 - [Discord Support Server](https://discord.gg/FrduEZd)
-- [GitHub](https://github.com/Scientific-Guy/node-set-theory/)
+- [GitHub](https://github.com/scientific-dev/node-set-theory/)
 
 # Quick Example
 
